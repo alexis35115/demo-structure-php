@@ -10,13 +10,10 @@
 <body>
     <?php 
     include "en-tete.php";
+    
+    echo("je ne suis plus seul dans la page");
+
+    include "pied-page.php";
     ?>
-
-
-    <?php echo("je ne suis plus seul dans la page")?>
-
-    <footer>
-        <small>Tous droits réservés 2021 © Alexis Garon-Michaud</small>
-    </footer>
 </body>
 </html>
