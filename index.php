@@ -8,15 +8,10 @@
     <title>Exemple</title>
 </head>
 <body>
-    <header>
-        <h1>Cinéma du monde</h1>
-        <nav>
-            <div style="float: right;">
-                <a href="index.php">Accueil</a>	|
-                <a href="https://www.cinemagaiete.com/">Cinéma Gaieté</a>
-            </div>
-        </nav>
-    </header>
+    <?php 
+    include "en-tete.php";
+    ?>
+
 
     <?php echo("je ne suis plus seul dans la page")?>
 
