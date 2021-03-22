@@ -10,8 +10,16 @@
 <body>
     <?php 
     include "en-tete.php";
-    
-    echo("je ne suis plus seul dans la page");
+
+    include "connexion.php";
+
+    $sth = $dbh->prepare("SELECT `id_film`, `titre`, `realisateur`, `resume` FROM `film`;");
+    $sth->execute();
+    $films = $sth->fetchAll();
+
+    foreach ($films as $film) {
+        print_r($film);
+    }
 
     include "pied-page.php";
     ?>
