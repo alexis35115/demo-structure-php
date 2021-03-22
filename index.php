@@ -13,12 +13,19 @@
 
     include "connexion.php";
 
-    $sth = $dbh->prepare("SELECT `id_film`, `titre`, `realisateur`, `resume` FROM `film`;");
+    $sth = $dbh->prepare("SELECT `titre`, `realisateur`, `resume` FROM `film`;");
     $sth->execute();
     $films = $sth->fetchAll();
 
     foreach ($films as $film) {
-        print_r($film);
+    ?>
+        <div class="liste-film espacement">
+            <h4><?=$film['titre']?></h4>
+            <span><?=$film['realisateur']?></span>
+            <p><?=$film['resume']?></p>
+        </div>
+
+    <?php
     }
 
     include "pied-page.php";
