@@ -13,7 +13,7 @@
 
     include "connexion.php";
 
-    $sth = $dbh->prepare("SELECT `titre`, `realisateur`, `resume` FROM `film`;");
+    $sth = $dbh->prepare("SELECT `id_film`, `titre`, `realisateur`, `resume` FROM `film`;");
     $sth->execute();
     $films = $sth->fetchAll();
 
@@ -21,7 +21,7 @@
     ?>
         <div class="liste-film espacement">
             <h4>
-                <a href="film-detail.php"><?=$film['titre']?></a>
+                <a href="film-detail.php?id_film=<?=$film['id_film']?>"><?=$film['titre']?></a>
             </h4>
             <span><?=$film['realisateur']?></span>
             <p><?=$film['resume']?></p>

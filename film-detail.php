@@ -1,3 +1,3 @@
 <?php 
-    echo("patate");
+    echo($_GET['id_film']);
 ?>
