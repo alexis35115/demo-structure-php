@@ -20,7 +20,9 @@
     foreach ($films as $film) {
     ?>
         <div class="liste-film espacement">
-            <h4><?=$film['titre']?></h4>
+            <h4>
+                <a href="film-detail.php"><?=$film['titre']?></a>
+            </h4>
             <span><?=$film['realisateur']?></span>
             <p><?=$film['resume']?></p>
         </div>
