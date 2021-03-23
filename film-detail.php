@@ -1,10 +1,10 @@
 <?php 
     include "connexion.php";
 
-    $id_film = $_GET['id_film'];
+    $idFilm = $_GET['id_film'];
 
-    $sth = $dbh->prepare("SELECT `titre`, `realisateur`, `resume`, `description`, `image` FROM `film` WHERE `id_film` = :id_film;");
-    $sth->bindParam(':id_film', $id_film, PDO::PARAM_INT);
+    $sth = $dbh->prepare("SELECT `id_film`, `titre`, `realisateur`, `resume`, `description`, `image` FROM `film` WHERE `id_film` = :id_film;");
+    $sth->bindParam(':id_film', $idFilm, PDO::PARAM_INT);
 
     $sth->execute();
 
@@ -24,7 +24,7 @@
     include "en-tete.php";
     ?>
     <div class="espacement">
-        <a href="supprimer-film-traitement.php">Supprimer ce film</a>
+        <a href="supprimer-film-traitement.php?id_film=<?=$film['id_film']?>">Supprimer ce film</a>
     </div>
     <section>
         <div class="espacement">

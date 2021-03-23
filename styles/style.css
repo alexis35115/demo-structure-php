@@ -26,6 +26,10 @@ body{
     width: 50%;
 }
 
+.centrer-text {
+    text-align: center;
+}
+
 .liste-film {
     border: solid 1px black;
 }
