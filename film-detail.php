@@ -26,11 +26,11 @@
 
     <section>
         <div class="espacement">
-            <h4></h4>
-            <span></span>
-            <p></p>
-            <p></p>
-            <img src="" alt="">
+            <h4><?=$film['titre']?></h4>
+            <span><?=$film['realisateur']?></span>
+            <p><?=$film['resume']?></p>
+            <p><?=$film['description']?></p>
+            <img src="images/<?=$film['image']?>" alt="image du film" class="centrer">
         </div>
     </section>
 
