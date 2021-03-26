@@ -11,7 +11,7 @@
     <?php 
     include "en-tete.php";
     ?>
-    
+
     <section>
         <h2>Ajouter un film</h2>
         <form action="creer-film-traitement.php" method="post">
@@ -38,7 +38,6 @@
             <input type="submit" value="Créer le film">                   
         </form>
     </section>
-
 
     <?php
     include "pied-page.php";
