@@ -10,15 +10,8 @@
 <body>
     <?php 
     include "en-tete.php";
-
-    /*
-    titre       -> champ texte
-    resume      -> textarea
-    description -> textarea
-    realisateur -> champ texte
-    image       -> champ texte
-    */
     ?>
+    
     <section>
         <h2>Ajouter un film</h2>
         <form action="creer-film-traitement.php" method="post">

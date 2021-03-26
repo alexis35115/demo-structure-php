@@ -10,6 +10,11 @@
 <body>
     <?php 
     include "en-tete.php";
+
+    print_r($_POST);
+
+    //UPDATE `film` SET `titre`=[value-2],`resume`=[value-3],`description`=[value-4],`realisateur`=[value-5],`image`=[value-6] WHERE `id_film` = :id_film;
+
     include "pied-page.php";
     ?>
 </body>

@@ -24,7 +24,8 @@
     include "en-tete.php";
     ?>
     <div class="espacement">
-        <a href="supprimer-film-traitement.php?id_film=<?=$film['id_film']?>">Supprimer ce film</a>
+        <a href="supprimer-film-traitement.php?id_film=<?=$film['id_film']?>">Supprimer ce film</a> |
+        <a href="modifier-film.php?id_film=<?=$film['id_film']?>">Modifier ce film</a> |
     </div>
     <section>
         <div class="espacement">
