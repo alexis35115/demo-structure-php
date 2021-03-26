@@ -10,18 +10,35 @@
 <body>
     <?php 
     include "en-tete.php";
-    ?>
+    include "connexion.php";
 
-    <?php 
+    try {
+        $sth = $dbh->prepare("INSERT INTO `film`(`titre`, `resume`, `description`, `realisateur`, `image`) VALUES (:titre,:resume,:description,:realisateur,:image)");
 
-    print_r($_POST);
+        $sth->bindParam(':titre', $_POST['titre'], PDO::PARAM_STR);
+        $sth->bindParam(':resume', $_POST['resume'], PDO::PARAM_STR);
+        $sth->bindParam(':description', $_POST['description'], PDO::PARAM_STR);
+        $sth->bindParam(':realisateur', $_POST['realisateur'], PDO::PARAM_STR);
+        $sth->bindParam(':image', $_POST['image'], PDO::PARAM_STR);
+        ?>
 
-    //INSERT INTO `film`(`titre`, `resume`, `description`, `realisateur`, `image`) VALUES ([value-2],[value-3],[value-4],[value-5],[value-6])
+        <div class="centrer centrer-text">
 
-    ?>
+        <?php
+        if ($sth->execute()) {
+            echo("Succès lors de la création du film.");
+        } else {
+            echo("Erreur lors de la création du film.");
+        }
+        ?>
 
+        </div>
 
-    <?php 
+        <?php
+    } catch (\Throwable $e) {
+        echo("Erreur lors de la création du film.");
+    }
+
     include "pied-page.php";
     ?>
 </body>
